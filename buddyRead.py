@@ -12,11 +12,11 @@ logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 def launch():
     statementText = "Hello, I am AlexaBuddy."
     questionText = "What subreddit would you like to browse?"
-    return statement.(statementText).question.(questionText)
+    return statement.(statementText)question.(questionText)
 
 
 
 @ask.session_ended
-# End session.
+#End session.
 def session_ended():
-    return
+    return 0;
