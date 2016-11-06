@@ -13,6 +13,7 @@ def launch():
     questionText = "What subreddit would you like to browse?"
     return question(questionText)
 
+
 @ask.intent("subRedditIntent")
 def subRedditBrowse():
     statementText = "You have entered the Donald"
