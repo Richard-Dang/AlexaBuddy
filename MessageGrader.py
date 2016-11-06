@@ -42,7 +42,11 @@ def gradeMultiple(inputList):
 
     # for loop that will get the marks of all elements in inputList (assume inputList is a list of strings)
     for i in inputList:
-        lines[i] = grade(i)
+        lines[i] = indicoio.sentiment(i)
+        if lines[i] > 0.5:
+            lines[i] = "Positive"
+        else:
+            lines[i] = "Negative"
 
     return lines
 
