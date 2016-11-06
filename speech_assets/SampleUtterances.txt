@@ -3,7 +3,3 @@ SubRedditIntent {subreddit | subreddit}
 NumOfPostsIntent {num_of_posts}
 
 ChoiceIntent {choice | choice}
-
-ContinueIntent continue
-
-NegativeIntent yes

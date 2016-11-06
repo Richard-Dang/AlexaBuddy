@@ -62,35 +62,11 @@ def read_post_titles(num_of_posts):
     return question(read_posts)
 
 
-@ask.intent("ContinueIntent")
+@ask.intent("AMAZON.YesIntent")
 
 def read_decision():
-
-    if len(neg_sentiment_arg) > 0:
-        # @ask.intent("ChoiceIntent", convert={'choice': str})
-        # def read_choice_question(choice):
-        #     global choice_arg
-        #     choice_arg = choice
-        #     choice_msg = render_template('negative')
-        #     return
-        return_result_msg = render_template('negative')
-        return question(return_result_msg)
-        # if choice_arg == "yes":
-        #     read_posts = render_template('read_posts', posts=neg_sentiment_arg)
-        #     return statement(read_posts)
-        # else:
-        #     goodbye_msg = render_template('goodbye')
-        #     return statement(goodbye_msg)
-    else:
-        return_result_msg = render_template('goodbye')
-        return statement(return_result_msg)
-
-@ask.intent("NegativeIntent")
-
-def say_neg_messages():
-    read_posts = render_template('read_neg_posts', posts=neg_sentiment_arg)
-    return statement(read_posts)
-
+    return_result_msg = render_template('read_neg_posts', posts=neg_sentiment_arg)
+    return statement(return_result_msg)
 
 
 if __name__ == '__main__':

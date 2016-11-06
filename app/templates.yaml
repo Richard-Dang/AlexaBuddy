@@ -2,10 +2,6 @@ welcome: Welcome to Reddit. Please tell me what subreddit you would like to read
 
 ask_posts: How many posts would you like me to read?
 
-read_pos_posts: Here are your posts {{ posts|join(", ") }}. Say continue to go to the next section.
+read_pos_posts: Here are your posts {{ posts|join(", ") }}. The following articles contain negative messages. Would you still like to hear them?
 
 read_neg_posts: Here are your posts {{ posts|join(", ") }}. Thank you for using Reddit News on Echo. See you later.
-
-negative: The following articles contain negative messages. Would you still like to hear them?
-
-goodbye: Thank you for using Reddit News on Echo. See you later.
