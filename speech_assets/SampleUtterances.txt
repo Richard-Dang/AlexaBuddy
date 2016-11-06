@@ -1,11 +1,7 @@
 SubRedditIntent {subreddit | subreddit}
 
-NumOfPosts {num_of_posts}
+NumOfPostsIntent {num_of_posts}
 
-YesIntent yes
+ChoiceIntent {choice | choice}
 
-YesIntent sure
-
-AnswerIntent {first} {second} {third}
-
-AnswerIntent {first} {second} and {third}
+GoodbyeIntent

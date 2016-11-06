@@ -69,7 +69,7 @@ def gradeMultiple(inputList):
 #------------------------------
 
 
-top_news_posts = get_top_posts('news',10)
-sentiment_dict = gradeMultiple(top_news_posts)
-pos_sentiment = sentiment_dict[0]
-neg_sentiment = sentiment_dict[1]
+# top_news_posts = get_top_posts('news',20)
+# sentiment_dict = gradeMultiple(top_news_posts)
+# pos_sentiment = sentiment_dict[0]
+# neg_sentiment = sentiment_dict[1]
