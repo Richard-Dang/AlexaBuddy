@@ -60,7 +60,7 @@ def gradeMultiple(inputList):
         return_posts.append([])
         for y in x:
             yCount = yCount + 1
-            y = (str(yCount) + " " + y)
+            y = (str(yCount) + ". " + y)
             return_posts[xCount].append(y)
         xCount = xCount + 1
 

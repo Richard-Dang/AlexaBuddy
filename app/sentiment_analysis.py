@@ -63,7 +63,6 @@ def read_post_titles(num_of_posts):
 
 
 @ask.intent("AMAZON.YesIntent")
-
 def read_decision():
     return_result_msg = render_template('read_neg_posts', posts=neg_sentiment_arg)
     return statement(return_result_msg)
