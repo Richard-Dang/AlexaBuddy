@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import praw
 import webbrowser
 import re

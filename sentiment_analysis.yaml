@@ -1,0 +1,9 @@
+welcome: Welcome to Reddit News. Please tell me what subreddit you would like to read.
+
+ask_posts: How many posts would you like to listen to?
+
+read_posts: Here are your posts {{ posts|join(", ") }}
+
+negative: The following articles contain negative messages. Would you still like to hear them?
+
+goodbye: Thank you for using Reddit News on Echo. See you later.
