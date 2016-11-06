@@ -65,6 +65,7 @@ def gradeMultiple(inputList):
     return posts
 
 #------------------------------
+
 top_news_posts = get_top_posts('news',10)
 sentiment_dict = gradeMultiple(top_news_posts)
 pos_sentiment = sentiment_dict[0]
