@@ -1,17 +1,26 @@
 {
     "intents": [
         {
+          "intent": "AMAZON.HelpIntent"
+        },
+        {
+          "intent": "AMAZON.StopIntent"
+        },
+        {
+          "intent": "AMAZON.CancelIntent"
+        },
+        {
+          "intent": "GetRecipeIntent",
             "slots": [
                 {
-                    "type": "AMAZON.LITERAL", 
+                    "type": "AMAZON.LITERAL",
                     "name": "Ingredient"
                 }
-            ], 
-            "intent": "GetRecipeIntent"
-        }, 
+            ]
+        },
         {
-            "slots": [], 
-            "intent": "NextRecipeIntent"
+            "intent": "NextRecipeIntent",
+            "slots": []
         }
     ]
 }
