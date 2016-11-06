@@ -1,0 +1,2 @@
+GetSubredditIntent go to {Subreddit}
+GetSubredditIntent {Subreddit}
