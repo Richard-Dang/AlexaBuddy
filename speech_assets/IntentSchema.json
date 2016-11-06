@@ -19,8 +19,7 @@
             ]
         },
         {
-            "intent": "NextSubredditIntent",
-            "slots": []
+          "intent": "readContentIntent"
         }
     ]
 }
