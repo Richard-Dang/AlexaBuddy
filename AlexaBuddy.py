@@ -4,9 +4,10 @@ import re
 import indicoio
 indicoio.config.api_key = 'f813d87aeb7c1fec9b38a95f466c414f'
 
-
 user_agent = "AlexaBuddy 1.0 by /u/alexabuddy"
 r = praw.Reddit(user_agent=user_agent)
+
+#-------------------------------------
 
 def authenticate ():
     r.set_oauth_app_info(client_id='FP4sj6FgPVoWZA',\
@@ -19,6 +20,8 @@ def authenticate ():
     r.refresh_access_information(access_information['refresh_token'])
     return r
 
+#-----------------------------------
+
 def get_top_posts(subreddit, num_posts):
     posts = []
     submissions = r.get_subreddit(subreddit).get_top(limit=num_posts)
@@ -28,6 +31,15 @@ def get_top_posts(subreddit, num_posts):
 
     return posts
 
+#------------------------------
+
+def get_top_posts_top_comments(subreddit, num_posts):
+    comments = []
+    submissions = r.get_subreddit(subreddit).get_top(limit=num_posts)
+    for x in submissions:
+        comments.append(x.comments[0].body)
+
+    return comments
 
 #-------------------------------
 
@@ -53,9 +65,12 @@ def gradeMultiple(inputList):
     return posts
 
 #------------------------------
-
-
 top_news_posts = get_top_posts('news',10)
 sentiment_dict = gradeMultiple(top_news_posts)
 pos_sentiment = sentiment_dict[0]
 neg_sentiment = sentiment_dict[1]
+
+top_news_posts_comments = get_top_posts_top_comments('news',10)
+comments_sentiment_dict = gradeMultiple(top_news_posts_comments)
+comments_pos_sentiment = comments_sentiment_dict[0]
+comments_neg_sentiment = comments_sentiment_dict[1]
