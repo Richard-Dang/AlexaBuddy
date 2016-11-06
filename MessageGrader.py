@@ -48,24 +48,34 @@ def gradeMultiple(inputList):
 
 #------------------------------
 
-def sortByGrades(inputDict):
-    "Sorts the given dictionary by returning a new dictonary where all the elements with a value of True are first"
+# accepts a dictionary
+# returns a new dictionary containing only the items with a value of True
+def findTrue(inputDict):
+    "Returns a dictonary with all the items from inputDict that have a value of True"
 
-    # new dictonary
-    sortedDict = {}
-
-    first = []
-    second = []
+    trueDict = {}  # new dictonary
 
     # loop through the inputDict and determine which elements have values of True
-    for k, v in inputDict.iteritems():
+    for k, v in inputDict.items():
         if v == True:
-            first.append(k)
-        else:
-            second.append(k)
+            trueDict[k] = v
 
-    # find the number of items in inputDict
-    numItems = inputDict.keys().size()
+    return trueDict
 
+#------------------------------
 
-    return
+# accepts a dictionary
+# returns a new dictionary containing only the items with a value of False
+def findFalse(inputDict):
+    "Returns a dictonary with all the items from inputDict that have a value of False"
+
+    falseDict = {}  # new dictonary
+
+    # loop through the inputDict and determine which elements have values of True
+    for k, v in inputDict.items():
+        if v == False:
+            falseDict[k] = v
+
+    return falseDict
+
+#--------------------------------
