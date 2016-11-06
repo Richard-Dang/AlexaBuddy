@@ -29,7 +29,6 @@ def get_top_posts(subreddit, num_posts):
         posts.append(title.group(0))
     return posts
 
-
 #-------------------------------
 
 # accepts a list
