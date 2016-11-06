@@ -1,5 +1,23 @@
 {
   "intents": [
+     {
+      "intent": "SubRedditIntent",
+      "slots": [
+        {
+          "name": "subreddit",
+          "type": "AMAZON.LITERAL"
+        }
+      ]
+    },
+    {
+      "intent": "NumOfPostsIntent",
+      "slots": [
+        {
+          "name": "num_of_posts",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
     {
       "intent": "YesIntent"
     },
@@ -16,18 +34,6 @@
         },
         {
           "name": "third",
-          "type": "AMAZON.NUMBER"
-        }
-      ]
-    },
-    {
-      "intent": "GetSubReddit"
-    },
-    {
-      "intent": "NumOfPosts",
-      "slots": [
-        {
-          "name": "numberOfPosts",
           "type": "AMAZON.NUMBER"
         }
       ]

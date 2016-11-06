@@ -24,10 +24,9 @@ def authenticate ():
 def get_top_posts(subreddit, num_posts):
     posts = []
     submissions = r.get_subreddit(subreddit).get_top(limit=num_posts)
-    for x in submissions:
+    for  x in submissions:
         title = re.search('(?<=::).*',str(x))
         posts.append(title.group(0))
-
     return posts
 
 
@@ -42,6 +41,8 @@ def gradeMultiple(inputList):
     posts = []
     pos_posts = []
     neg_posts = []
+    xCount = 0
+    yCount = 0
 
     # for loop that will get the marks of all elements in inputList (assume inputList is a list of strings)
     for i in inputList:
@@ -49,10 +50,21 @@ def gradeMultiple(inputList):
             pos_posts.append(i)
         else:
             neg_posts.append(i)
+
     posts.append(pos_posts)
     posts.append(neg_posts)
 
-    return posts
+    return_posts = []
+
+    for x in posts:
+        return_posts.append([])
+        for y in x:
+            yCount = yCount + 1
+            y = (str(yCount) + " " + y)
+            return_posts[xCount].append(y)
+        xCount = xCount + 1
+
+    return return_posts
 
 #------------------------------
 

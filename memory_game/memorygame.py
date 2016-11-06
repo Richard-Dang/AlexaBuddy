@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import logging
 
 from random import randint
@@ -14,7 +12,6 @@ app = Flask(__name__)
 ask = Ask(app, "/")
 
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
-
 
 
 @ask.launch

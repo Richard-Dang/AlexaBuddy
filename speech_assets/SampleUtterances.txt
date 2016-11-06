@@ -1,16 +1,11 @@
+SubRedditIntent {subreddit | subreddit}
+
+NumOfPosts {num_of_posts}
+
 YesIntent yes
 
 YesIntent sure
 
-NoIntent no
-
-NoIntent nah
-
 AnswerIntent {first} {second} {third}
 
 AnswerIntent {first} {second} and {third}
-
-GetSubReddit News
-
-NumOfPosts {numberOfPosts}
-

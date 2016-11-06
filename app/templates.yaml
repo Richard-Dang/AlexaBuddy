@@ -1,6 +1,6 @@
-welcome: Welcome to Reddit News. Please tell me what subreddit you would like to read.
+welcome: Welcome to Reddit. Please tell me what subreddit you would like to read.
 
-ask_posts: How many posts would you like to listen to?
+ask_posts: How many posts would you like me to read?
 
 read_posts: Here are your posts {{ posts|join(", ") }}
 
