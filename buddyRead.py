@@ -8,17 +8,28 @@ ask = Ask(app, "/")
 logging.getLogger("flask_ask").setLevel(logging.DEBUG)
 
 
-@ask.launch
+@ask.launch()
 def launch():
-    statementText = "Hello, I am AlexaBuddy."
     questionText = "What subreddit would you like to browse?"
-    return statement.(statementText)question.(questionText)
+    return question(questionText)
 
-@ask.
-def
+@ask.intent("subRedditIntent")
+def subRedditBrowse():
+    statementText = "You have entered the Donald"
+    return statement(statementText)
 
+@ask.intent("readComments")
+def readComments():
+    commentText1 = "comment 1"
+    commentText2 = "comment 2"
+    return statement(commentText1)
 
 @ask.session_ended
 #End session.
 def session_ended():
-    return 0;
+    statementText = "Goodbye, buddy"
+    return statement(statementText)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
