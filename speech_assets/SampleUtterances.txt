@@ -4,4 +4,6 @@ NumOfPostsIntent {num_of_posts}
 
 ChoiceIntent {choice | choice}
 
-GoodbyeIntent
+ContinueIntent continue
+
+NegativeIntent yes

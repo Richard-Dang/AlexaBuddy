@@ -28,7 +28,10 @@
       ]
     },
     {
-      "intent": "GoodbyeIntent"
+      "intent": "ContinueIntent"
+    },
+    {
+      "intent": "NegativeIntent"
     }
   ]
 }

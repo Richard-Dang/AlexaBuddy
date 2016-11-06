@@ -16,7 +16,7 @@ def authenticate ():
                          redirect_uri='http://127.0.0.1:65010/authorize_callback')
     url = r.get_authorize_url('uniqueKey','identity read submit',True)
     webbrowser.open(url)
-    access_information = r.get_access_information('PmyTPEiJOXZcf7IgCs1SJupYRCQ')
+    access_information = r.get_access_information('mCk1x5yJphyEVJxsabth1joOvjY')
     r.set_access_credentials(**access_information)
     r.refresh_access_information(access_information['refresh_token'])
     return r

@@ -57,34 +57,39 @@ def read_post_titles(num_of_posts):
     pos_sentiment = sentiment_dict[0]
     neg_sentiment_arg = sentiment_dict[1]
 
-    print pos_sentiment
-    print neg_sentiment_arg
+    read_posts = render_template('read_pos_posts', posts=pos_sentiment)
 
-    read_posts = render_template('read_posts', posts=pos_sentiment)
     return question(read_posts)
 
 
-@ask.intent("GoodbyeIntent")
+@ask.intent("ContinueIntent")
 
 def read_decision():
 
     if len(neg_sentiment_arg) > 0:
-        @ask.intent("ChoiceIntent", convert={'choice': str})
-        def read_choice_question(choice):
-            global choice_arg
-            choice_arg = choice
-            choice_msg = render_template('negative')
-            return question(choice_msg)
-
-        if choice_arg == "yes":
-            read_posts = render_template('read_posts', posts=neg_sentiment_arg)
-            return statement(read_posts)
-        else:
-            goodbye_msg = render_template('goodbye')
-            return statement(goodbye_msg)
+        # @ask.intent("ChoiceIntent", convert={'choice': str})
+        # def read_choice_question(choice):
+        #     global choice_arg
+        #     choice_arg = choice
+        #     choice_msg = render_template('negative')
+        #     return
+        return_result_msg = render_template('negative')
+        return question(return_result_msg)
+        # if choice_arg == "yes":
+        #     read_posts = render_template('read_posts', posts=neg_sentiment_arg)
+        #     return statement(read_posts)
+        # else:
+        #     goodbye_msg = render_template('goodbye')
+        #     return statement(goodbye_msg)
     else:
-        goodbye_msg = render_template('goodbye')
-        return statement(goodbye_msg)
+        return_result_msg = render_template('goodbye')
+        return statement(return_result_msg)
+
+@ask.intent("NegativeIntent")
+
+def say_neg_messages():
+    read_posts = render_template('read_neg_posts', posts=neg_sentiment_arg)
+    return statement(read_posts)
 
 
 
