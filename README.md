@@ -6,3 +6,5 @@ Alexa Buddy is a Amazon Echo app that allows the user to browse Reddit using voc
 More Info: https://devpost.com/software/alexabuddy
 
 Video: https://www.dropbox.com/s/1cbuuys17m8fnsi/Alexa-Buddy-Video.mp4?dl=0
+
+![AlexaBuddy](http://richarddang.com/images/portfolio/alexa-buddy.png)
